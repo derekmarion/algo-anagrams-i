@@ -27,6 +27,8 @@ def test_04():
     assert is_character_match_complex('Anna Madrigal', 'A man and a girl') == True
 def test_05():
     assert is_character_match_complex('cat', 'Tacocat') == False
+def test_06():
+    assert is_character_match_complex('abba', 'abaa') == False
 
 '''
 # Part 2
