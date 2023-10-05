@@ -10,7 +10,7 @@ def test_2():
 def test_3():
     assert is_character_match('abcde2', 'c2abed') == True
 def test_4():
-    assert is_character_match('Anna Madrigal', 'A man and a girl') == True #whitespace sensitive
+    assert is_character_match('Anna Madrigal', 'A man and a girl') == True
 def test_5():
     assert is_character_match('cat', 'Tacocat') == False
 
@@ -24,7 +24,7 @@ def test_02():
 def test_03():
     assert is_character_match_complex('abcde2', 'c2abed') == True
 def test_04():
-    assert is_character_match_complex('Anna Madrigal', 'A man and a girl') == True #whitespace insensitive
+    assert is_character_match_complex('Anna Madrigal', 'A man and a girl') == True
 def test_05():
     assert is_character_match_complex('cat', 'Tacocat') == False
 

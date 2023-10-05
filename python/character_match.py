@@ -2,11 +2,13 @@
 
 # Part 1
 def is_character_match(string1, string2):
-	if sorted(string1.lower()) == sorted(string2.lower()):
+	if sorted(string1.lower().replace(" ", "")) == sorted(string2.lower().replace(" ", "")):
 		return True
 	return False
 
 def is_character_match_complex(string1, string2):
+	if len(string1.lower().replace(" ", "")) != len(string2.lower().replace(" ", "")):
+		return False
 	for character in string1:
 		if character.lower() not in string2.lower():
 			return False
