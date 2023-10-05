@@ -6,13 +6,20 @@ def is_character_match(string1, string2):
 		return True
 	return False
 
+def char_counter(char, list):
+	count = 0
+	for element in list:
+		if element == char:
+			count += 1
+	return count
+
 def is_character_match_complex(string1, string2):
-	if len(string1.lower().replace(" ", "")) != len(string2.lower().replace(" ", "")):
-		return False
-	for character in string1:
-		if character.lower() not in string2.lower():
+	string1_arr = list(string1.replace(" ", "").lower())
+	string2_arr = list(string2.replace(" ", "").lower())
+	for character in string1_arr:
+		if char_counter(character, string1_arr) != char_counter(character, string2_arr):
 			return False
-		return True
+	return True
 
 # Part 2
 def anagrams_for(word, list_of_words):
