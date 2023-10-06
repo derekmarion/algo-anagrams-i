@@ -23,5 +23,8 @@ def is_character_match_complex(string1, string2):
 
 # Part 2
 def anagrams_for(word, list_of_words):
-	# your code here
-	pass
+	output = []
+	for element in list_of_words:
+		if is_character_match(word, element):
+			output.append(element)
+	return output

@@ -30,11 +30,10 @@ def test_05():
 def test_06():
     assert is_character_match_complex('abba', 'abaa') == False
 
-'''
 # Part 2
 
 list_of_words = ["threads", "trashed", "hardest", "hatreds", "hounds"]
 
-print(anagrams_for("threads", list_of_words) == ["threads", "trashed", "hardest", "hatreds"])
-print(anagrams_for("apple", list_of_words) == [])
-'''
+def test_anagrams_for():
+    assert anagrams_for("threads", list_of_words) == ["threads", "trashed", "hardest", "hatreds"]
+    assert anagrams_for("apple", list_of_words) == []
