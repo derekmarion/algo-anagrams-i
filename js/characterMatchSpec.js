@@ -1,22 +1,38 @@
 var ana = require("./characterMatch");
 
-// Part 1
-console.log(ana.isCharacterMatch('charm', 'march') === true);
-console.log(ana.isCharacterMatch('zach', 'attack') === false);
-console.log(ana.isCharacterMatch('CharM', 'mARcH') === true);
-console.log(ana.isCharacterMatch('abcde2', 'c2abed') === true);
+// Part 1 Tests
+describe("isCharacterMatch Tests", () => {
+    test("Test 1", () => { 
+      expect(ana.isCharacterMatch('charm', 'march')).toEqual(true);
+    });
 
-console.log("This test is for the challenge quesiton");
-console.log(ana.isCharacterMatch('Anna Madrigal', 'A man and a girl') === true);
+    test("Test 2", () => { 
+        expect(ana.isCharacterMatch('zach', 'attack')).toEqual(false);
+      });
 
+    test("Test 3", () => { 
+    expect(ana.isCharacterMatch('CharM', 'mARcH')).toEqual(true);
+    });
 
-// Part 2
-listOfWords = ["threads", "trashed", "hardest", "hatreds", "hounds"];
+    test("Test 4", () => { 
+    expect(ana.isCharacterMatch('abcde2', 'c2abed')).toEqual(true);
+    });
+  });
 
-console.log(ana.anagramsFor("threads", listOfWords).length == 4);
-console.log(ana.anagramsFor("threads", listOfWords)[0] == "threads");
-console.log(ana.anagramsFor("threads", listOfWords)[1] == "trashed");
-console.log(ana.anagramsFor("threads", listOfWords)[2] == "hardest");
-console.log(ana.anagramsFor("threads", listOfWords)[3] == "hatreds");
+// isCharacterMatchComplex Tests
+describe("isCharacterMatchComplex Tests", () => {
+    test("Test 1", () => { 
+      expect(ana.isCharacterMatchComplex('Anna Madrigal', 'A man and a girl')).toEqual(true);
+    });
+  });
 
-console.log(ana.anagramsFor("apple", listOfWords).length == 0);
+// Part 2 Tests
+describe("anagramsFor Tests", () => {
+    test("Test list of words with several anagrams", () => { 
+      expect(ana.anagramsFor("threads", list_of_words)).toEqual(["threads", "trashed", "hardest", "hatreds"]);
+    });
+
+    test("Test that will produce no output", () => { 
+        expect(ana.anagramsFor("apple", listOfWords)).toEqual([]);
+      });
+  });
