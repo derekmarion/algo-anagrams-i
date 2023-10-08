@@ -20,12 +20,14 @@ describe("isCharacterMatch Tests", () => {
   });
 
 // Part 2 Tests
+list_of_words = ["threads", "trashed", "hardest", "hatreds", "hounds"];
+
 describe("anagramsFor Tests", () => {
     test("Test list of words with several anagrams", () => { 
       expect(ana.anagramsFor("threads", list_of_words)).toEqual(["threads", "trashed", "hardest", "hatreds"]);
     });
 
     test("Test that will produce no output", () => { 
-        expect(ana.anagramsFor("apple", listOfWords)).toEqual([]);
+        expect(ana.anagramsFor("apple", list_of_words)).toEqual([]);
       });
   });
