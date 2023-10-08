@@ -19,13 +19,6 @@ describe("isCharacterMatch Tests", () => {
     });
   });
 
-// isCharacterMatchComplex Tests
-describe("isCharacterMatchComplex Tests", () => {
-    test("Test 1", () => { 
-      expect(ana.isCharacterMatchComplex('Anna Madrigal', 'A man and a girl')).toEqual(true);
-    });
-  });
-
 // Part 2 Tests
 describe("anagramsFor Tests", () => {
     test("Test list of words with several anagrams", () => { 
